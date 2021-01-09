@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>Produtos</span>
+</mat-toolbar>
+
+<mat-nav-list>
+  <mat-list-item *ngFor="let product of products">
+    <a matLine [routerLink]="['/products', product.codigo]">{{product.descricao}}</a>
+    <button mat-icon-buttom (click)="deleteProduct(product)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-nav-list>
+
+<a class="create" routerLink="/products/create" mat-fab color="primary" aria-label="Novo Produto">
+  <mat-icon>add</mat-icon>
+</a>

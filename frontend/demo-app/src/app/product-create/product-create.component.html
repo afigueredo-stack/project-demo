@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <span>Novo produto</span>
+</mat-toolbar>
+
+<form [formGroup]="productForm" class="form" (ngSubmit)="createProduct()">
+  <mat-form-field appearance="standard">
+    <mat-label>Descrição</mat-label>
+    <input matInput formControlName="descricao">
+  </mat-form-field>
+
+  <div class="actions">
+    <a routerLink="/products" mat-raised-button>Cancelar</a>
+    <button type="submit" mat-raised-button color="primary" [disabled]="productForm.invalid">Criar</button>
+  </div>
+</form>

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>Detalhes do produto #{{codigo}}</span>
+</mat-toolbar>
+
+<form [formGroup]="productForm" class="form" (ngSubmit)="updateProduct()">
+  <mat-form-field appearance="standard">
+    <mat-label>Descrição</mat-label>
+    <input matInput formControlName="descricao">
+  </mat-form-field>
+
+  <div class=" actions">
+    <a routerLink="/products" mat-raised-button>Voltar para lista</a>
+    <button type="submit" mat-raised-button color="primary"
+      [disabled]="!productForm.dirty || productForm.invalid">Salvar</button>
+  </div>
+</form>
