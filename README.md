@@ -5,6 +5,7 @@ A API RESTful desse projeto contém as seguintes características:
 * Projeto criado com Spring Boot e Java 8
 * Banco de dados Oracle com JPA e Spring Data JPA
 ### Como executar a aplicação
+Deve-se migrar o dump localizado em resources em sua database Oracle
 Projeto alterado para rodar usando o Spring 2
 Certifique-se de ter o Maven instalado e adicionado ao PATH de seu sistema operacional, assim como o Git.
 ```
